@@ -1,0 +1,23 @@
+﻿@model  IEnumerable<StudManagement_MVC_frame.Models.Student>
+
+@using StudManagement_MVC_frame.Models;
+
+@{
+    ViewBag.Title = "Student List";
+}
+
+<div style="font-family:Arial">
+
+    <h2>Student Lists</h2>
+    <ul>
+        @foreach (Student student in Model)
+        {
+            <li>
+                @Html.ActionLink(student.StudName, "StudentDetails", new { id = student.StudID })
+            </li>
+
+        }
+    </ul>
+
+</div>
+

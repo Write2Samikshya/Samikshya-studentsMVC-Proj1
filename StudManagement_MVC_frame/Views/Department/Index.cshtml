@@ -1,0 +1,31 @@
+﻿
+
+@model   IEnumerable<StudManagement_MVC_frame.Models.Department>
+
+    @using StudManagement_MVC_frame.Models;
+
+@{
+    ViewBag.Title = "Departments List";
+}
+
+<div style="font-family:Arial">
+
+    <h2>Departments List</h2>
+
+    <ul>
+        @foreach (Department dept in Model)
+        {
+            <li>
+
+                @Html.ActionLink(dept.DeptName, "StudentbyDeptID", "Student", new {deptid=dept.DeptID},null)
+
+            </li>
+
+        }
+
+    </ul>
+</div>
+
+
+
+

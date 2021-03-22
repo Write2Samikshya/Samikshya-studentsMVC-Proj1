@@ -1,0 +1,40 @@
+﻿@model StudManagement_MVC_frame.Models.Student
+
+@{
+    ViewBag.Title = "StudentDetails";
+}
+
+<h2>Student  Details</h2>
+
+<table style="font-family:Arial">
+    <tr>
+        <td>
+            <b>Student ID: </b>
+        </td>
+        <td>@Model.StudID</td>
+
+    </tr>
+    <tr>
+        <td>
+            <b>Student Name: </b>
+        </td>
+        <td>@Model.StudName</td>
+
+    </tr>
+    <tr>
+        <td>
+            <b>Student Gender: </b>
+        </td>
+        <td>@Model.StudGender</td>
+
+    </tr>
+    <tr>
+        <td>
+            <b>Student CITY: </b>
+        </td>
+        <td>@Model.StudCity</td>
+
+    </tr>
+
+</table>
+@Html.ActionLink("Back To List", "Index")
